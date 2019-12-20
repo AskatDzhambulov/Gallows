@@ -38,7 +38,12 @@ firstData = FirstPage(faq, 'Askat', 'Dzhambulov')
 
 canvas.create_text(310, 240, text=FirstPage.about(firstData), fill="purple", font=("Helvetica", "14"))
 canvas.create_text(490, 500, text=('by'+ ' ' + FirstPage.author(firstData)), fill="red", font=("Helvetica", "14"))
-words = ["capital", "compare", "billion", "captain", "collect", "bedroom", "concept"]
+words =[]
+
+with open('words.txt') as f:
+    for line in f:
+        list = [elt.strip() for elt in line.split(',')]
+        words = list
 
 def arr():
     but()
