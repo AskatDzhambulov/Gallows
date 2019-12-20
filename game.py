@@ -2,7 +2,7 @@ import random
 from tkinter import *;
 
 from tk import canvas, root;
-from firstPage import FirstPage;
+from firstPageClass import FirstPage;
 from cell import cell;
 from errorAction import head, body, armL, armR, footR, footL;
 
@@ -13,10 +13,10 @@ for the remaining letters, for example with lines
 (there is also an option when initially all the letters of
 the word are unknown). A gallows with a noose is also drawn.'''
 
-firstData = FirstPage(faq, 'Askat', 'Dzhambulov')
+firstData = FirstPage(faq, 'Askat', 'Dzhambulov', 'COM-17')
 
 canvas.create_text(310, 240, text=FirstPage.about(firstData), fill="purple", font=("Helvetica", "14"))
-canvas.create_text(490, 500, text=('by'+ ' ' + FirstPage.author(firstData)), fill="red", font=("Helvetica", "14"))
+canvas.create_text(450, 500, text=('by'+ ' ' + FirstPage.author(firstData)), fill="red", font=("Helvetica", "14"))
 words =[]
 
 with open('words.txt') as dictionary:
