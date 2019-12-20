@@ -32,8 +32,8 @@ def arr():
     a2 = canvas.create_text(347, 40, text="_", fill="purple", font=("Helvetica", "18"))
     a3 = canvas.create_text(380, 40, text="_", fill="purple", font=("Helvetica", "18"))
     a4 = canvas.create_text(412, 40, text="_", fill="purple", font=("Helvetica", "18"))
-    a5 = canvas.create_text(477, 40, text="_", fill="purple", font=("Helvetica", "18"))
-    a6 = canvas.create_text(510, 40, text=word[-1], fill="purple", font=("Helvetica", "18"))
+    a5 = canvas.create_text(444, 40, text="_", fill="purple", font=("Helvetica", "18"))
+    a6 = canvas.create_text(477, 40, text=word[-1], fill="purple", font=("Helvetica", "18"))
     list1 = [1,2,3,4,5,6]
     alfabet = "abcdefghijklmnopqrstuvwxyz"
     error = []
@@ -74,14 +74,31 @@ def arr():
                 win.append(v)
                 ind2 = wor.index((v))
                 b2 = list1[ind2]
+                x1, y1 = kord()
+                canvas.create_text(x1, y1, text = wo[ind2], fill="purple", font=("Helvetica", "18"))
+            if len(win) == 6:
                 canvas.create_text(150, 150, text = "You win!", fill="purple", font=("Helvetica", "18"))
-                for i in  alfabet:
+                for i in alfabet:
                     btn[i] ["state"] = "disabled"
         else:
             error.append(v)
             btn[key] ["bg"] = "red"
             btn[key] ["state"] = "disabled"
 
+            if len(error) == 1:
+                head()
+            elif len(error) == 2:
+                body()
+            elif len(error) == 3:
+                armR()
+            elif len(error) == 4:
+                armL()
+            elif len(error) == 5:
+                footL()
+            elif len(error) == 6:
+                footR()
+                end()
+            root.update()
 
     btn = {}
 
@@ -108,6 +125,35 @@ def arr():
     for i in alfabet[24:26]:
         gen(i, x, y)
         x = x + 33
+
+    def head():
+        canvas.create_oval(79, 59, 120, 80, width = 4, fill = "white")
+        root.update()
+
+    def body():
+        canvas.create_line(100, 80, 100, 200, width = 4)
+        root.update()
+
+    def armR():
+        canvas.create_line(100, 80, 145, 100, width = 4)
+        root.update()
+
+    def armL():
+        canvas.create_line(100, 80, 45, 100, width = 4)
+        root.update()
+
+    def footL():
+        canvas.create_line(100, 200, 45, 300, width = 4)
+        root.update()
+
+    def footR():
+        canvas.create_line(100, 200, 145, 300, width = 4)
+        root.update()
+
+    def end():
+        canvas.create_text(150, 150, text="You lose", fill="purple", font=("Helvetica", "18"))
+        for i in alfabet:
+            btn[i] ["state"] = "disabled"
 
 
 btn01 = Button(root, text="Start!", width=10, height=2, command=lambda: arr( ))
