@@ -1,19 +1,11 @@
 import random
 from tkinter import *;
 
-root= Tk()
-root.title('Gallows')
-canvas = Canvas(root, width=600, height=600)
-canvas.pack()
+from tk import canvas, root;
+from firstPage import FirstPage;
+from cell import cell;
+from errorAction import head, body, armL, armR, footR, footL;
 
-def but():
-    y=0
-    while y < 600:
-        x =0
-        while x < 600:
-            canvas.create_rectangle(x, y, x+33, y+27, fill="white", outline="blue")
-            x = x+33
-        y = y+27
 
 faq = '''One of the players makes a word - writes the first
 and last letter of the word on paper and marks the places
@@ -21,32 +13,19 @@ for the remaining letters, for example with lines
 (there is also an option when initially all the letters of
 the word are unknown). A gallows with a noose is also drawn.'''
 
-class FirstPage:
-    def __init__(self, description, name, surname):
-        self.description  = description
-        self.name = name
-        self.surname = surname
-        self.email = name + '.' + surname + '@iaau.edu.kg'
-
-    def about (self):
-        return self.description
-
-    def author (self):
-        return '{} {}'.format(self.name, self.surname)
-
 firstData = FirstPage(faq, 'Askat', 'Dzhambulov')
 
 canvas.create_text(310, 240, text=FirstPage.about(firstData), fill="purple", font=("Helvetica", "14"))
 canvas.create_text(490, 500, text=('by'+ ' ' + FirstPage.author(firstData)), fill="red", font=("Helvetica", "14"))
 words =[]
 
-with open('words.txt') as f:
-    for line in f:
+with open('words.txt') as dictionary:
+    for line in dictionary:
         list = [elt.strip() for elt in line.split(',')]
         words = list
 
 def arr():
-    but()
+    cell()
     word = random.choice(words)
     wo = word[1:-1]
     wor = []
@@ -151,31 +130,8 @@ def arr():
         gen(i, x, y)
         x = x + 33
 
-    def head():
-        canvas.create_oval(79, 59, 120, 80, width = 4, fill = "white")
-        root.update()
-
-    def body():
-        canvas.create_line(100, 80, 100, 200, width = 4)
-        root.update()
-
-    def armR():
-        canvas.create_line(100, 80, 145, 100, width = 4)
-        root.update()
-
-    def armL():
-        canvas.create_line(100, 80, 45, 100, width = 4)
-        root.update()
-
-    def footL():
-        canvas.create_line(100, 200, 45, 300, width = 4)
-        root.update()
-
-    def footR():
-        canvas.create_line(100, 200, 145, 300, width = 4)
-        root.update()
-
     def end():
+
         canvas.create_text(150, 150, text="You lose", fill="purple", font=("Helvetica", "18"))
         for i in alfabet:
             btn[i] ["state"] = "disabled"
