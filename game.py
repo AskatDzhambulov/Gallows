@@ -15,10 +15,14 @@ def but():
             x = x+33
         y = y+27
 
-faq = '''Let`s play'''
+faq = '''One of the players makes a word - writes the first
+        and last letter of the word on paper and marks the places
+        for the remaining letters, for example with lines 
+        (there is also an option when initially all the letters of
+        the word are unknown). A gallows with a noose is also drawn.'''
 
 canvas.create_text(310, 240, text=faq, fill="purple", font=("Helvetica", "14"))
-words = ["chazzan", "chazzen", "fuzzing", "buzzing", "frizzly", "muzzily", "fizzily"]
+words = ["capital", "compare", "billion", "captain", "collect", "bedroom", "concept"]
 
 def arr():
     but()
@@ -75,9 +79,9 @@ def arr():
                 ind2 = wor.index((v))
                 b2 = list1[ind2]
                 x1, y1 = kord()
-                canvas.create_text(x1, y1, text = wo[ind2], fill="purple", font=("Helvetica", "18"))
-            if len(win) == 6:
-                canvas.create_text(150, 150, text = "You win!", fill="purple", font=("Helvetica", "18"))
+                canvas.create_text(x1, y1, text=wo[ind2], fill="purple", font=("Helvetica", "18"))
+            if len(win) == 5:
+                canvas.create_text(150, 150, text="You win!", fill="purple", font=("Helvetica", "18"))
                 for i in alfabet:
                     btn[i] ["state"] = "disabled"
         else:

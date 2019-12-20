@@ -90,22 +90,22 @@
       <screen x="0" y="27" width="1366" height="741" />
     </state>
     <state x="141" y="54" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.27.1366.741@0.27.1366.741" timestamp="1576809842816" />
-    <state width="1343" height="175" key="GridCell.Tab.0.bottom" timestamp="1576824755897">
+    <state width="1343" height="175" key="GridCell.Tab.0.bottom" timestamp="1576828233767">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state width="1343" height="175" key="GridCell.Tab.0.bottom/0.27.1366.741@0.27.1366.741" timestamp="1576824755897" />
-    <state width="1343" height="175" key="GridCell.Tab.0.center" timestamp="1576824755896">
+    <state width="1343" height="175" key="GridCell.Tab.0.bottom/0.27.1366.741@0.27.1366.741" timestamp="1576828233767" />
+    <state width="1343" height="175" key="GridCell.Tab.0.center" timestamp="1576828233766">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state width="1343" height="175" key="GridCell.Tab.0.center/0.27.1366.741@0.27.1366.741" timestamp="1576824755896" />
-    <state width="1343" height="175" key="GridCell.Tab.0.left" timestamp="1576824755896">
+    <state width="1343" height="175" key="GridCell.Tab.0.center/0.27.1366.741@0.27.1366.741" timestamp="1576828233766" />
+    <state width="1343" height="175" key="GridCell.Tab.0.left" timestamp="1576828233765">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state width="1343" height="175" key="GridCell.Tab.0.left/0.27.1366.741@0.27.1366.741" timestamp="1576824755896" />
-    <state width="1343" height="175" key="GridCell.Tab.0.right" timestamp="1576824755896">
+    <state width="1343" height="175" key="GridCell.Tab.0.left/0.27.1366.741@0.27.1366.741" timestamp="1576828233765" />
+    <state width="1343" height="175" key="GridCell.Tab.0.right" timestamp="1576828233766">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state width="1343" height="175" key="GridCell.Tab.0.right/0.27.1366.741@0.27.1366.741" timestamp="1576824755896" />
+    <state width="1343" height="175" key="GridCell.Tab.0.right/0.27.1366.741@0.27.1366.741" timestamp="1576828233766" />
     <state x="339" y="224" key="com.intellij.ide.util.TipDialog" timestamp="1576809798652">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
@@ -114,5 +114,9 @@
       <screen x="0" y="27" width="1366" height="741" />
     </state>
     <state x="434" y="79" width="488" height="635" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.27.1366.741@0.27.1366.741" timestamp="1576810409193" />
+    <state x="451" y="316" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1576827223245">
+      <screen x="0" y="27" width="1366" height="741" />
+    </state>
+    <state x="451" y="316" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.27.1366.741@0.27.1366.741" timestamp="1576827223245" />
   </component>
 </project>
